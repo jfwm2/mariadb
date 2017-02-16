@@ -64,6 +64,10 @@ module MariaDB
     # @param [String] os_platform Indicate operating system type, e.g. centos
     # @param [String] os_version Indicate operating system version, e.g. 7.0
     def use_os_native_package?(prefer_os, os_platform, os_version)
+      puts "--------------------------------- " +"use_os_native_package?(prefer_os, os_platform, os_version)"+ " ---------------------------------"
+      puts "--------------------------------- " +"prefer_os = " + prefer_os.to_s + " ---------------------------------"
+      puts "--------------------------------- " +"os_platform = " + os_platform.to_s + " ---------------------------------"
+      puts "--------------------------------- " +"os_version = " + os_version.to_s + " ---------------------------------"
       return false unless prefer_os
       if os_package_provided?(os_platform, os_version)
         true

@@ -28,6 +28,8 @@ when 'package'
     node['platform_version']
   )
 
+  puts "------------------------------------------------- use_os_package = " + use_os_package.to_s  + "-------------------------------------------------"
+
   include_recipe "#{cookbook_name}::repository" unless use_os_package
 
   case node['platform_family']
